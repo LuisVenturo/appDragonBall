@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <div style={{ minHeight: "calc(100vh - 64px)", position: "relative", overflow: "hidden" }}>
-      {/* Animated background orbs */}
       <div style={{
         position: "absolute", width: "600px", height: "600px", borderRadius: "50%",
         background: "radial-gradient(circle, rgba(255,120,20,0.12) 0%, transparent 70%)",
@@ -15,18 +14,15 @@ const Home = () => {
         bottom: "50px", left: "-80px", animation: "float 10s ease-in-out infinite reverse"
       }} />
 
-      {/* Dragon Balls decorative */}
       <div style={{ position: "absolute", top: "15%", right: "8%", opacity: 0.15, fontSize: "8rem", animation: "float 6s ease-in-out infinite" }}>
         ⚡
       </div>
 
-      {/* Hero section */}
       <div style={{
         display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center",
         minHeight: "calc(100vh - 130px)", textAlign: "center", padding: "2rem",
         position: "relative", zIndex: 1
       }}>
-        {/* Badge */}
         <div style={{
           display: "inline-flex", alignItems: "center", gap: "0.5rem",
           padding: "0.4rem 1.2rem", borderRadius: "999px",
@@ -78,7 +74,6 @@ const Home = () => {
           </Link>
         </div>
 
-        {/* Stats row */}
         <div style={{
           display: "flex", gap: "3rem", marginTop: "4rem",
           flexWrap: "wrap", justifyContent: "center",

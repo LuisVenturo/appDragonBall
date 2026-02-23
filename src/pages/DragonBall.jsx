@@ -29,7 +29,6 @@ const CharacterCard = ({ character }) => {
         cursor: "pointer",
         position: "relative",
       }}>
-        {/* Image */}
         <div style={{
           position: "relative", overflow: "hidden",
           background: "linear-gradient(135deg, #1a1a2e, #16213e)",
@@ -48,7 +47,6 @@ const CharacterCard = ({ character }) => {
           ) : (
             <span style={{ fontSize: "4rem" }}>⚡</span>
           )}
-          {/* Race badge */}
           <div style={{
             position: "absolute", bottom: "8px", right: "8px",
             padding: "2px 10px", borderRadius: "999px", fontSize: "0.65rem",
@@ -61,7 +59,6 @@ const CharacterCard = ({ character }) => {
           </div>
         </div>
 
-        {/* Info */}
         <div style={{ padding: "1rem" }}>
           <h3 style={{
             fontSize: "1rem", fontWeight: 700, color: "var(--text-light)",
@@ -107,7 +104,6 @@ const DragonBall = () => {
 
   return (
     <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "3rem 1.5rem" }}>
-      {/* Header */}
       <div style={{ marginBottom: "2.5rem" }}>
         <p style={{ color: "var(--orange)", fontSize: "0.75rem", letterSpacing: "0.25em", textTransform: "uppercase", marginBottom: "0.5rem" }}>
           — Universo Dragon Ball
@@ -121,12 +117,10 @@ const DragonBall = () => {
         </h1>
       </div>
 
-      {/* Filters */}
       <div style={{
         display: "flex", gap: "1rem", marginBottom: "2rem",
         flexWrap: "wrap", alignItems: "center"
       }}>
-        {/* Search */}
         <div style={{ position: "relative", flex: "1", minWidth: "250px" }}>
           <span style={{
             position: "absolute", left: "14px", top: "50%", transform: "translateY(-50%)",
@@ -154,7 +148,6 @@ const DragonBall = () => {
           />
         </div>
 
-        {/* Race filter */}
         <select
           value={raceFilter}
           onChange={e => setRaceFilter(e.target.value)}
@@ -174,7 +167,6 @@ const DragonBall = () => {
           {races.map(r => <option key={r} value={r} style={{ background: "#1a1a2e" }}>{r}</option>)}
         </select>
 
-        {/* Count */}
         <div style={{
           padding: "0.75rem 1.2rem",
           background: "rgba(255,120,20,0.1)",
@@ -188,7 +180,6 @@ const DragonBall = () => {
         </div>
       </div>
 
-      {/* States */}
       {loading && (
         <div style={{ textAlign: "center", padding: "5rem", color: "var(--text-muted)" }}>
           <div style={{ fontSize: "3rem", marginBottom: "1rem", animation: "float 1s ease-in-out infinite" }}>⚡</div>
@@ -213,7 +204,6 @@ const DragonBall = () => {
         </div>
       )}
 
-      {/* Grid */}
       {!loading && !error && (
         <div style={{
           display: "grid",

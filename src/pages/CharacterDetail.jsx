@@ -63,13 +63,11 @@ const CharacterDetail = () => {
         ← Volver a personajes
       </Link>
 
-      {/* Hero section */}
       <div style={{
         display: "grid", gridTemplateColumns: "1fr 1.4fr", gap: "3rem",
         alignItems: "start",
         "@media(max-width: 768px)": { gridTemplateColumns: "1fr" }
       }}>
-        {/* Image Panel */}
         <div>
           <div style={{
             position: "relative", borderRadius: "16px", overflow: "hidden",
@@ -87,7 +85,6 @@ const CharacterDetail = () => {
             ) : (
               <div style={{ padding: "5rem", textAlign: "center", fontSize: "5rem" }}>⚡</div>
             )}
-            {/* Gradient overlay */}
             <div style={{
               position: "absolute", bottom: 0, left: 0, right: 0, height: "40%",
               background: "linear-gradient(transparent, rgba(10,10,15,0.95))",
@@ -111,9 +108,7 @@ const CharacterDetail = () => {
           </div>
         </div>
 
-        {/* Info Panel */}
         <div>
-          {/* Tags */}
           <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap", marginBottom: "1.5rem" }}>
             {character.affiliation && (
               <span style={{
@@ -137,7 +132,6 @@ const CharacterDetail = () => {
             )}
           </div>
 
-          {/* Description */}
           {character.description && (
             <p style={{
               color: "var(--text-muted)", lineHeight: 1.8, fontSize: "0.95rem",
@@ -148,7 +142,6 @@ const CharacterDetail = () => {
             </p>
           )}
 
-          {/* Ki stats */}
           <div style={{
             background: "rgba(255,255,255,0.03)",
             border: "1px solid rgba(255,120,20,0.15)",
@@ -161,7 +154,6 @@ const CharacterDetail = () => {
             <StatBar label="KI Máximo" value={character.maxKi} max={1000000000} />
           </div>
 
-          {/* Transformations */}
           {character.transformations && character.transformations.length > 0 && (
             <div style={{
               background: "rgba(255,255,255,0.03)",
