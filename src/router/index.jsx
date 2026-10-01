@@ -4,23 +4,29 @@ import Home from "../pages/Home";
 import DragonBall from "../pages/DragonBall";
 import CharacterDetail from "../pages/CharacterDetail";
 
-export const router = createBrowserRouter([
+export const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <Layout />,
+      children: [
+        {
+          index: true,
+          element: <Home />
+        },
+        {
+          path: "dragonball",
+          element: <DragonBall />
+        },
+        {
+          path: "dragonball/:id",
+          element: <CharacterDetail />
+        }
+      ]
+    }
+  ],
   {
-    path: "/",
-    element: <Layout />,
-    children: [
-      {
-        index: true,
-        element: <Home />
-      },
-      {
-        path: "/dragonball",
-        element: <DragonBall />
-      },
-      {
-        path: "/dragonball/:id",
-        element: <CharacterDetail />
-      }
-    ]
+    // Vite returns "/" locally and "/appDragonBall/" in GitHub Pages.
+    basename: import.meta.env.BASE_URL
   }
-]);
+);
