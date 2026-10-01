@@ -79,7 +79,10 @@ const CharacterDetail = () => {
               <img
                 src={character.image}
                 alt={character.name}
-                style={{ width: "100%", display: "block", maxHeight: "500px", objectFit: "cover" }}
+                style={{
+                  width: "100%", height: "500px", display: "block",
+                  objectFit: "contain", objectPosition: "center center"
+                }}
                 onError={e => { e.target.parentElement.innerHTML = '<div style="padding:5rem;text-align:center;font-size:5rem">⚡</div>'; }}
               />
             ) : (
@@ -171,7 +174,8 @@ const CharacterDetail = () => {
                         src={t.image}
                         alt={t.name}
                         style={{
-                          width: "70px", height: "70px", objectFit: "cover",
+                          width: "70px", height: "70px", objectFit: "contain",
+                          objectPosition: "center center",
                           borderRadius: "8px", border: "1px solid rgba(255,120,20,0.2)",
                           marginBottom: "0.4rem"
                         }}

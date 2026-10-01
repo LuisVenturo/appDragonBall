@@ -39,7 +39,8 @@ const CharacterCard = ({ character }) => {
               src={character.image}
               alt={character.name}
               style={{
-                width: "100%", height: "100%", objectFit: "cover",
+                width: "100%", height: "100%", objectFit: "contain",
+                objectPosition: "center center",
                 transition: "transform 0.4s ease"
               }}
               onError={e => { e.target.style.display = "none"; }}
